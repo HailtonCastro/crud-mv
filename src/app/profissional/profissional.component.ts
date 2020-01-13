@@ -34,8 +34,7 @@ export class ProfissionalComponent implements OnInit {
   buscaTodos(){
     this._profissionalService.buscaTodos().subscribe(
       resposta => {
-        this.profissionais = resposta
-        console.log(resposta)
+        this.profissionais = resposta        
       },
       erro => {
         console.log(erro)
@@ -59,7 +58,6 @@ export class ProfissionalComponent implements OnInit {
   }  
 
   delete(id){
-    console.log(id)
     this._profissionalService.delete(id).subscribe(
       resposta => {
         this.buscaTodos()       

@@ -35,7 +35,7 @@ export class EstabelecimentoComponent implements OnInit {
     this._estabelecimentoService.buscaTodos().subscribe(
       resposta => {
         this.estabelecimentos = resposta
-        console.log(resposta)
+       
       },
       erro => {
         console.log(erro)

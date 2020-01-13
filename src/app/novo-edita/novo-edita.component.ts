@@ -50,6 +50,7 @@ export class NovoEditaComponent implements OnInit {
 
   addNovo(){    
     if (this.formulario.valid) {
+      this.valido = this.formulario.valid
       if (this.tipoPai == "Profissional") {
         this._profissionalService.add(this.formulario.value).subscribe(
           resposta=>{

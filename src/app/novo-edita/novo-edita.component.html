@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="card-header">
+        Novo/Edita {{tipoPai}}
+    </div>
+    <div class="card-body">
+        <form  [formGroup]="formulario" >
+            <div class="form-row mb-3">
+                <div class="col">
+                  
+                      <input 
+                          type="text" 
+                          class="form-control" 
+                          aria-label="Sizing example input" 
+                          aria-describedby="inputGroup-sizing-sm"
+                          formControlName="nome"
+                          placeholder="Nome"                          
+                      >
+                      <small *ngIf="!valido" class="rounded alert-danger mb-2">
+                        Preencha todos os campos.
+                      </small>
+                </div>
+                <div class="col">                    
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      aria-label="Sizing example input" 
+                      aria-describedby="inputGroup-sizing-sm"
+                      formControlName="endereco"
+                      placeholder="Endereço"
+                  >
+                </div>
+                
+            </div>
+            
+           
+            
+           
+            <div class="input-group input-group-sm mb-3">
+                <button 
+                    type="button" 
+                    class="btn btn-success mr-3"
+                    (click)="addNovo(formulario)"
+                    >
+                    Novo
+                </button>
+                
+                <button
+                (click)="atualiza()"
+                    type="button" 
+                    class="btn btn-primary mr-3">
+                    Atualiza
+                </button>
+                <button
+                    (click)="resetForm()" 
+                    type="button" 
+                    class="btn btn-secondary"
+                    
+                >
+                    Limpa
+            </button
+            >
+            </div>
+        </form>
+        
+    </div>
+
+</div>
+
+
+

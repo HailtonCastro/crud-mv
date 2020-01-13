@@ -1,0 +1,13 @@
+.nav-link{
+    border-bottom: 1px solid #674f4f;
+    color: black;
+}
+.nav-link:hover{
+    background: #f5ebec;
+}
+.router-link-active{
+    background: #d6cccd;
+}
+.container-fluid{
+    margin: 36px 0 0 0px;
+}
